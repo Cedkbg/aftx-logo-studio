@@ -10,6 +10,7 @@ import MonnaieElectronique from "./pages/MonnaieElectronique";
 import Trading from "./pages/Trading";
 import Fondateur from "./pages/Fondateur";
 import NotFound from "./pages/NotFound";
+import FounderSidebar from "./components/FounderSidebar";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <FounderSidebar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/banque-electronique" element={<BanqueElectronique />} />
