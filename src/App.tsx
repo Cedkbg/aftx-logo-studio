@@ -9,6 +9,7 @@ import PortefeuilleElectronique from "./pages/PortefeuilleElectronique";
 import MonnaieElectronique from "./pages/MonnaieElectronique";
 import Trading from "./pages/Trading";
 import Fondateur from "./pages/Fondateur";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import FounderSidebar from "./components/FounderSidebar";
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/monnaie-electronique" element={<MonnaieElectronique />} />
           <Route path="/trading" element={<Trading />} />
           <Route path="/fondateur" element={<Fondateur />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

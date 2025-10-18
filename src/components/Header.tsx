@@ -1,5 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,10 +17,23 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
 import afrifintechLogo from "@/assets/afrifinetech-logo.png";
 
 const Header = () => {
   const location = useLocation();
+
+  const services = [
+    { title: "Banque Électronique", url: "/banque-electronique", description: "Solutions bancaires digitales innovantes" },
+    { title: "Portefeuille Électronique", url: "/portefeuille-electronique", description: "Paiements mobiles sécurisés" },
+    { title: "Monnaie Électronique", url: "/monnaie-electronique", description: "Crypto-monnaies et actifs digitaux" },
+    { title: "Trading & Broker", url: "/trading", description: "Plateforme de trading professionnel" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -93,9 +114,74 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Button asChild className="bg-gradient-to-r from-primary to-accent hover:opacity-90">
-          <Link to="/contact">Contact</Link>
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button asChild className="bg-gradient-to-r from-primary to-accent hover:opacity-90 hidden sm:flex">
+            <Link to="/contact">Contact</Link>
+          </Button>
+
+          {/* Menu Hamburger Mobile */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+              <SheetHeader>
+                <SheetTitle className="text-left">
+                  <Link to="/" className="flex items-center gap-3">
+                    <img src={afrifintechLogo} alt="AFRIFINETECH X Logo" className="h-8 w-8" />
+                    <div>
+                      <h2 className="text-lg font-bold">AFRIFINETECH X</h2>
+                      <p className="text-xs text-muted-foreground">AFTX Globale</p>
+                    </div>
+                  </Link>
+                </SheetTitle>
+              </SheetHeader>
+              
+              <nav className="flex flex-col gap-4 mt-8">
+                <Link 
+                  to="/" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                >
+                  Accueil
+                </Link>
+
+                <Collapsible>
+                  <CollapsibleTrigger className="flex items-center justify-between w-full text-lg font-medium hover:text-primary transition-colors">
+                    Services
+                    <ChevronDown className="h-4 w-4" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 ml-4 flex flex-col gap-3">
+                    {services.map((service) => (
+                      <Link
+                        key={service.url}
+                        to={service.url}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </CollapsibleContent>
+                </Collapsible>
+
+                <Link 
+                  to="/fondateur" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                >
+                  Notre Fondateur
+                </Link>
+
+                <Link 
+                  to="/contact" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                >
+                  Contact
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
