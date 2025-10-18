@@ -16,7 +16,7 @@ const Contact = () => {
             Contactez-nous
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            AFRIFINETECH X est à votre écoute. N'hésitez pas à nous contacter pour toute question ou demande d'information.
+            AFRIFINTECH X est à votre écoute. N'hésitez pas à nous contacter pour toute question ou demande d'information.
           </p>
         </div>
 

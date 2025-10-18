@@ -60,7 +60,7 @@ const Fondateur = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Visionnaire et entrepreneur passionné, Ced Kabongo a révolutionné l'accès aux services financiers en Afrique. 
                   Avec plus de 5 ans d'expérience dans la technologie et le développement de logiciel, il a créé 
-                  AFRIFINETECH X pour démocratiser la finance et construire un avenir économique inclusif.
+                  AFRIFINTECH X pour démocratiser la finance et construire un avenir économique inclusif.
                 </p>
                 <div className="flex gap-4 pt-4">
                   <Button size="lg" variant="outline" className="gap-2" asChild>

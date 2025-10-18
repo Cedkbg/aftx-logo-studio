@@ -63,7 +63,7 @@ const MonnaieElectronique = () => {
         <div className="relative container px-4 h-full flex items-center">
           <div className="max-w-2xl text-white space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold">
-              Monnaie Électronique
+              ATFXcoin
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
               Entrez dans l'économie du futur. Investissez et gérez vos crypto-monnaies en toute sécurité.

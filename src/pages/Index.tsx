@@ -172,7 +172,7 @@ const Index = () => {
               Prêt à transformer votre avenir financier ?
             </h2>
             <p className="text-xl text-white/90">
-              Rejoignez des millions d'utilisateurs qui font confiance à AFRIFINETECH X
+              Rejoignez des millions d'utilisateurs qui font confiance à AFRIFINTECH X
             </p>
             <Button 
               size="lg" 

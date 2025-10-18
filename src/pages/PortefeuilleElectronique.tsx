@@ -68,7 +68,7 @@ const PortefeuilleElectronique = () => {
         <div className="relative container px-4 h-full flex items-center">
           <div className="max-w-2xl text-white space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold">
-              Portefeuille Électronique
+              AFTX wallet
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
               Votre argent, toujours à portée de main. Payez, transférez et gérez vos finances depuis votre mobile.

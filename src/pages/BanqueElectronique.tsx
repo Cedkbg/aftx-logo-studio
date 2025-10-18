@@ -56,7 +56,7 @@ const BanqueElectronique = () => {
         <div className="relative container px-4 h-full flex items-center">
           <div className="max-w-2xl text-white space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold">
-              Banque Électronique
+              AFTX banque
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
               L'avenir de la banque est numérique. Gérez vos finances en toute simplicité avec nos solutions bancaires innovantes.
